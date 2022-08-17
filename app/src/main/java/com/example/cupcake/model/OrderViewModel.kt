@@ -31,4 +31,9 @@ class OrderViewModel  : ViewModel() {
         _date.value = pickupDate
     }
     //deixar esses métodos públicos pois serão acessados fora da VM
+
+    //verifica se o sabor foi definido ou não
+    fun hasNoFlavorSet(): Boolean {
+        return _flavor.value.isNullOrEmpty()
+    }
 }
