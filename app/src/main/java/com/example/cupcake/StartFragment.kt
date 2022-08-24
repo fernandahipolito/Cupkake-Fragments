@@ -53,19 +53,20 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding?.startFragment = this
 
-        binding?.apply {
+        //binding?.apply {
             // Set up the button click listeners
-            orderOneCupcake.setOnClickListener { orderCupcake(ONE) }
-            orderSixCupcakes.setOnClickListener { orderCupcake(SIX) }
-            orderTwelveCupcakes.setOnClickListener { orderCupcake(TWELVE) }
-        }
+         //   orderOneCupcake.setOnClickListener { orderCupcake(ONE) }
+        //    orderSixCupcakes.setOnClickListener { orderCupcake(SIX) }
+        //    orderTwelveCupcakes.setOnClickListener { orderCupcake(TWELVE) }
+       // }
     }
 
     /**
      * Start an order with the desired quantity of cupcakes and navigate to the next screen.
      */
-    private fun orderCupcake(quantity: Int) {
+     fun orderCupcake(quantity: Int) {
         sharedViewModel.setQuantity(quantity)
         //se não tiver escolhido o sabor, vai o padrão baunilha
         if(sharedViewModel.hasNoFlavorSet()) {
