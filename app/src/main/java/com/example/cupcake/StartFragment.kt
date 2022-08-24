@@ -19,7 +19,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -29,6 +28,11 @@ import com.example.cupcake.model.OrderViewModel
 /**
  * This is the first screen of the Cupcake app. The user can choose how many cupcakes to order.
  */
+
+private const val ONE: Int = 1
+private const val SIX: Int = 6
+private const val TWELVE: Int = 12
+
 class StartFragment : Fragment() {
 
     private val sharedViewModel: OrderViewModel by activityViewModels()
@@ -41,7 +45,7 @@ class StartFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val fragmentBinding = FragmentStartBinding.inflate(inflater, container, false)
         binding = fragmentBinding
         return fragmentBinding.root
@@ -49,22 +53,26 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding?.startFragment = this
 
-        binding?.apply {
+        //binding?.apply {
             // Set up the button click listeners
-            orderOneCupcake.setOnClickListener { orderCupcake(1) }
-            orderSixCupcakes.setOnClickListener { orderCupcake(6) }
-            orderTwelveCupcakes.setOnClickListener { orderCupcake(12) }
-        }
+         //   orderOneCupcake.setOnClickListener { orderCupcake(ONE) }
+        //    orderSixCupcakes.setOnClickListener { orderCupcake(SIX) }
+        //    orderTwelveCupcakes.setOnClickListener { orderCupcake(TWELVE) }
+       // }
     }
 
     /**
      * Start an order with the desired quantity of cupcakes and navigate to the next screen.
      */
-    fun orderCupcake(quantity: Int) {
-        findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
+     fun orderCupcake(quantity: Int) {
         sharedViewModel.setQuantity(quantity)
-       // Toast.makeText(activity, "Ordered $quantity cupcake(s)", Toast.LENGTH_SHORT).show()
+        //se não tiver escolhido o sabor, vai o padrão baunilha
+        if(sharedViewModel.hasNoFlavorSet()) {
+            sharedViewModel.setFlavor(getString(R.string.vanilla))
+        }
+        findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
     }
 
     /**

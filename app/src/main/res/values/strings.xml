@@ -15,28 +15,28 @@
 -->
 <resources>
     <string name="app_name">Cupcake</string>
-    <string name="order_cupcakes">Order Cupcakes</string>
-    <string name="one_cupcake">One Cupcake</string>
-    <string name="six_cupcakes">Six Cupcakes</string>
-    <string name="twelve_cupcakes">Twelve Cupcakes</string>
-    <string name="choose_flavor">Choose Flavor</string>
-    <string name="vanilla">Vanilla</string>
+    <string name="order_cupcakes">Encomendar Cupcakes</string>
+    <string name="one_cupcake">Um Cupcake</string>
+    <string name="six_cupcakes">Seis Cupcakes</string>
+    <string name="twelve_cupcakes">Doze Cupcakes</string>
+    <string name="choose_flavor">Escolha o sabor</string>
+    <string name="vanilla">Baunilha</string>
     <string name="chocolate">Chocolate</string>
     <string name="red_velvet">Red Velvet</string>
-    <string name="salted_caramel">Salted Caramel</string>
-    <string name="coffee">Coffee</string>
-    <string name="special_flavor">Special Flavor</string>
-    <string name="cancel">Cancel</string>
-    <string name="next">Next</string>
-    <string name="choose_pickup_date">Choose Pickup Date</string>
-    <string name="order_summary">Order Summary</string>
-    <string name="send">Send Order to Another App</string>
-    <string name="quantity">Quantity</string>
-    <string name="flavor">Flavor</string>
-    <string name="pickup_date">Pickup date</string>
+    <string name="salted_caramel">Caramelo Salgado</string>
+    <string name="coffee">Café</string>
+    <string name="special_flavor">Especial</string>
+    <string name="cancel">Cancelar</string>
+    <string name="next">Próxima</string>
+    <string name="choose_pickup_date">Escolha o dia para retirada</string>
+    <string name="order_summary">Resumo do pedido</string>
+    <string name="send">Enviar o pedido para outro App</string>
+    <string name="quantity">Quantidade</string>
+    <string name="flavor">Sabor</string>
+    <string name="pickup_date">Data da retirada</string>
     <string name="subtotal_price">Subtotal %s</string>
     <string name="total_price">Total %s</string>
-    <string name="new_cupcake_order">New Cupcake Order</string>
-    <string name="order_details">Quantity: %1$s cupcakes \n Flavor: %2$s \nPickup date: %3$s \n
-        Total: %4$s \n\n Thank you!</string>
+    <string name="new_cupcake_order">Novo pedido</string>
+    <string name="order_details">Quantidade: %1$s cupcakes \n Sabor: %2$s \nPickup Data da retirada: %3$s \n
+        Total: %4$s \n\n Agradecemos a preferência!</string>
 </resources>
